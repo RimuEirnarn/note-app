@@ -27,7 +27,7 @@ const _notes = (notes_tag, notes_inputtag) => {
             const that = this
             $.ajax({
                 cache: false,
-                url: "/template/note.html",
+                url: "template/note.html",
                 success(resp) {
                     note_html = resp
                     that.initiate_refresh()
