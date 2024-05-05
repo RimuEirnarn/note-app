@@ -1,0 +1,42 @@
+:root {
+    --ntime-color: gray;
+    --nt-color: white;
+}
+
+.header {
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+#ni-content {
+    resize: none;
+}
+
+#note-input {
+    background-color: var(--ct);
+    border-radius: 12px;
+}
+
+#notes {
+    overscroll-behavior: contain;
+}
+
+html, body {
+    background-color: var(--bg);
+    scroll-behavior: smooth;
+}
+
+.note-title {
+    color: var(--nt-color);
+    font-weight: bold;
+}
+
+.note-time {
+    color: var(--ntime-color);
+    font-weight: 100;
+}
+
+.note-content-small {
+    color: var(--ntime-color);
+    font-weight: 100;
+}

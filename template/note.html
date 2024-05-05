@@ -1,0 +1,16 @@
+<div class='container border $[check_trigger] rounded mb-2' data-nid="$[note_id]">
+  <div class='d-flex p-2 mt-2'>
+    <p class="note-title flex-fill">$[title]</p>
+    <span class='note-time'>$[time]</span>
+    <span role='button' class='ms-2 dropdown'>
+      <i class="bi bi-three-dots-vertical" data-bs-toggle="dropdown" aria-expanded="false"></i>
+      <ul class="dropdown-menu">
+        <li><button type="button" class="dropdown-item" data-target="$[note_id]-check" $[check_trigger2]><i class="bi bi-check me-1"></i> Check</button></li>
+        <li><button type='button' class="dropdown-item" data-target="$[note_id]-edit"><i class="bi bi-pencil me-1"></i> Edit</button></li>
+        <li><button type='button' class="dropdown-item text-danger" data-target="$[note_id]-delete"><i class="bi bi-trash me-1"></i> Delete</button>
+        </li>
+      </ul>
+    </span>
+  </div>
+  <p class='note-content-small'>$[content]</p>
+</div>
