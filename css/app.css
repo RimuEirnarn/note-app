@@ -6,12 +6,16 @@
     font-family: 'Fira Code', 'Courier New', Courier, monospace;
 }
 
+* {
+    font-family: "Fira Code";
+}
+
 .uwu {
-    font-family: "FOT-Yuruka Std", 'Fira Code' !important;
+    font-family: "FOT-Yuruka Std", 'Lilita One', 'Fira Code' !important;
 }
 
 .header {
-    font-family: 'Fira Code', 'Courier New', Courier, monospace;
+    font-family: 'Fira Code', 'Lilita One', 'Courier New', Courier, monospace;
     text-align: center;
 }
 

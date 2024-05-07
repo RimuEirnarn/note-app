@@ -3,7 +3,7 @@ import { now, randint, getModeScheme, sanitize, trace_query } from "./utils.mjs"
 import { showAlert } from "./alerts.mjs";
 
 const _generate_id = () => `note-id_${randint(100000)}-${btoa(now())}`
-const __version__ = '0.0.1'
+const __version__ = '0.0.1a'
 
 const _notes = (notes_tag, notes_inputtag) => {
     const notes_ = {}
@@ -191,9 +191,9 @@ if ("uwu" in QUERY) {
     QUERY['uwu'] === "true" ? (() => {
         $('html').addClass('uwu');
         $('.header > h3').addClass('uwu');
-        showAlert({title: "",
-                   body: "",
-                   type: 'error',
+        showAlert({title: "[app.js] [mode=uwu] Failed to load main mode font.",
+                   body: "EHTTP-402: Yurika STD cannot be loaded, it's pay-to-use, loaded alternative font instead :(",
+                   type: 'warn',
                    delay: 5000})
     })() : null
 }
