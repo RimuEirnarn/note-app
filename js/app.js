@@ -172,7 +172,6 @@ $('.header > h3').append(` v${sanitize(__version__)}`)
 const NoteApp = _notes("#notes", "#note-input")
 NoteApp.init()
 
-showAlert({ 'title': "Hello, World!", body: "Notification", type: "info" })
 document.documentElement.setAttribute("data-bs-theme", getModeScheme())
 
 matchMedia("(prefers-color-scheme: dark)").onchange = (e) => {
@@ -186,3 +185,4 @@ matchMedia("(prefers-color-scheme: dark)").onchange = (e) => {
     document.documentElement.setAttribute("data-bs-theme", mode)
 }
 
+showAlert({ 'title': "[app.js]", body: "Application is fully loaded", type: "info" })
