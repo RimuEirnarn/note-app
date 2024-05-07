@@ -191,9 +191,9 @@ if ("uwu" in QUERY) {
     QUERY['uwu'] === "true" ? (() => {
         $('html').addClass('uwu');
         $('.header > h3').addClass('uwu');
-        showAlert({title: "[app.js] Uwu Mode Activated",
-                   body: "UwU mode has been activated! :3",
-                   type: 'info',
+        showAlert({title: "",
+                   body: "",
+                   type: 'error',
                    delay: 5000})
     })() : null
 }
