@@ -1,10 +1,13 @@
+@import url(https://db.onlinewebfonts.com/c/2b3966678f6a1c8c8be202caeb49d95a?family=FOT-Yuruka+Std); 
+
 :root {
     --ntime-color: gray;
     --nt-color: white;
+    font-family: 'Fira Code', 'Courier New', Courier, monospace;
 }
 
 .uwu {
-    font-family: "FOT-Yuruka Std", 'Fira Code', 'Courier New', Courier, monospace !important;
+    font-family: "FOT-Yuruka Std", 'Fira Code' !important;
 }
 
 .header {

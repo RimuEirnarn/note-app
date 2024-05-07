@@ -73,6 +73,20 @@ function now() {
     return new Date().getTime()
 }
 
+function trace_query() {
+    let q = location.search
+    if (!q) return {}
+    q = q.slice(1).split("&")
+    const data = {}
+    let key, val;
+
+    for (let i of q)  {
+        [key, val] = i.split('=')
+        data[key] = val
+    }
+    return data
+}
+
 const id_ID = {
     identifier: 'id-ID',
     days: ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"],
@@ -98,4 +112,4 @@ const id_ID = {
 if (navigator.language.startsWith('id'))
     strftime.localize(id_ID)
 
-export { sanitize, getCookie, setCookie, sleep, randint, isSmallScreen, now, getModeScheme }
+export { sanitize, getCookie, setCookie, sleep, randint, isSmallScreen, now, getModeScheme, trace_query }

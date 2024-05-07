@@ -1,5 +1,5 @@
 import { getItem, setItem, removeItem } from "./localstorage.mjs";
-import { now, randint, getModeScheme, sanitize } from "./utils.mjs";
+import { now, randint, getModeScheme, sanitize, trace_query } from "./utils.mjs";
 import { showAlert } from "./alerts.mjs";
 
 const _generate_id = () => `note-id_${randint(100000)}-${btoa(now())}`
@@ -170,6 +170,7 @@ const _notes = (notes_tag, notes_inputtag) => {
 
 $('.header > h3').append(` v${sanitize(__version__)}`)
 const NoteApp = _notes("#notes", "#note-input")
+const QUERY = trace_query()
 NoteApp.init()
 
 document.documentElement.setAttribute("data-bs-theme", getModeScheme())
@@ -183,6 +184,18 @@ matchMedia("(prefers-color-scheme: dark)").onchange = (e) => {
     }
     showAlert(data)
     document.documentElement.setAttribute("data-bs-theme", mode)
+}
+
+console.log(QUERY)
+if ("uwu" in QUERY) {
+    QUERY['uwu'] === "true" ? (() => {
+        $('html').addClass('uwu');
+        $('.header > h3').addClass('uwu');
+        showAlert({title: "[app.js] Uwu Mode Activated",
+                   body: "UwU mode has been activated! :3",
+                   type: 'info',
+                   delay: 5000})
+    })() : null
 }
 
 showAlert({ 'title': "[app.js]", body: "Application is fully loaded", type: "info" })
