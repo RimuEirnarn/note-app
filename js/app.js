@@ -186,4 +186,3 @@ matchMedia("(prefers-color-scheme: dark)").onchange = (e) => {
     document.documentElement.setAttribute("data-bs-theme", mode)
 }
 
-

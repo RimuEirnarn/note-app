@@ -98,6 +98,10 @@ function showAlert(config) {
     const toastLiveExample = document.getElementById(toastId)
     const toastBootstrap = bootstrap.Toast.getOrCreateInstance(toastLiveExample, {delay: delay})
     toastBootstrap.show()
+
+    toastLiveExample.addEventListener("hidden.bs.toast", () => {
+        $(`#${toastId}`).remove()
+    })
 }
 
 const showError = (body) => {
